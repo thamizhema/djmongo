@@ -25,7 +25,7 @@ SECRET_KEY = 'afjv#0w=y-*)1981f_7n1^thu2)fs%xps%^p^5bhk*!5#%d3fg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','oceandjmongo.herokuapp.com']
 
 
 # Application definition
