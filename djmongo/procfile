@@ -1,0 +1,1 @@
+web: gunicorn djmongo.wsgi --log-file -

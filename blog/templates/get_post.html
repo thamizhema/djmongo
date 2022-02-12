@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+<!--  -->
+{% block content %}
+<!--  -->
+
+{% for post in posts %}
+<div>
+  <img src="{{ post.profile }}" alt="" height="50" width="auto" />
+  <h1>{{ post.title }}</h1>
+  <p>{{ post.content }}</p>
+  <a href="{% url 'delete_post' id=post.docId %}">Delete</a> <br />
+  <a href="{% url 'update_post' id=post.docId %}">update</a>
+</div>
+
+{% endfor %}
+
+<!--  -->
+{% endblock content %}

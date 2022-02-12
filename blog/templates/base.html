@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% if title %}
+    <title>blog-{{ title }}</title>
+    {% else %}
+    <title>blog</title>
+
+    {% endif %}
+  </head>
+  <body>
+    <ul>
+      <li><a href="admin/">Admin</a></li>
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'add_post' %}">Add Post</a></li>
+      <li><a href="{% url 'get_post' %}">Get Post</a></li>
+      <li><a href="{% url 'file_upload' %}">File Upload</a></li>
+      <li><a href="{% url 'send_email' %}">Send Email</a></li>
+    </ul>
+    {% block content %} {% endblock %}
+  </body>
+</html>

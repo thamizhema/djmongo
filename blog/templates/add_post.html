@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+<!--  -->
+{% block content %}
+<!--  -->
+<!-- <form method="POST" enctype="multipart/form-data" action="{% url 'get_post' %}"> -->
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+
+  <input type="text" placeholder="title" name="title" /><br />
+  <textarea
+    name="content"
+    id=""
+    cols="30"
+    rows="5"
+    placeholder="content"
+  ></textarea>
+  <br />
+  <label>pick Your image</label>
+  <input type="file" name="profile" accept="image/png, image/jpeg" />
+  <br />
+  <input type="submit" />
+</form>
+<!--  -->
+{% endblock content %}

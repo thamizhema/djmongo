@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+<!--  -->
+
+{% block content %}
+<!--  -->
+<h1>Home</h1>
+
+{% if username %}
+<h3>Hi {{ username }}</h3>
+<a href="{% url 'logout' %}">Logout</a>
+{% else %}
+
+<form method="POST">
+  {% csrf_token %} username
+  <input type="text" placeholder="username" name="username" /><br />
+  password <input type="password" placeholder="password" name="password" />
+  <br /><input type="submit" value="Login" />
+</form>
+
+{% endif %} {% if messages %} {% for message in messages %}
+<p style="color: green">{{ message }}</p>
+{% endfor %}{% endif %}
+
+<!--  -->
+{% endblock content %}

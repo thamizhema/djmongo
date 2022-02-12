@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+<!--  -->
+{% block content %}
+<!--  -->
+<h1>update</h1>
+<form method="POST" action="{% url 'updating' id=id %}">
+  {% csrf_token %}
+
+  <input
+    type="text"
+    placeholder="title"
+    name="title"
+    value="{{ data.title }}"
+  /><br />
+  <textarea name="content" id="" cols="30" rows="5" placeholder="content">
+{{ data.content }}</textarea
+  >
+  <br />
+
+  <input type="submit" />
+</form>
+<!--  -->
+{% endblock content %}
